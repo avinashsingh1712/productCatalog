@@ -31,8 +31,7 @@ The Product Catalogue application is a proof of concept (POC) for managing a pro
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/product-catalog.git
-    cd product-catalog
+    git clone https://github.com/avinashsingh1712/productCatalog.git
     ```
 
 2. Build the project using Maven:
@@ -49,6 +48,11 @@ The Product Catalogue application is a proof of concept (POC) for managing a pro
 
 The application can be configured using the `application.properties` file located in the `src/main/resources` directory. Here is an example configuration:
 
+### Test
+All the below Curl commands are added in the Postman collection in the below link. Please save the file and import in your Postman.
+https://github.com/avinashsingh1712/productCatalog/blob/ReadMe-update/src/test/Product-catalog.postman_collection.json
+
 ```ini
 spring.application.name=product-catalog# productCatalog
 # productCatalog
+
