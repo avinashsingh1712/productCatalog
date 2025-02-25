@@ -46,13 +46,13 @@ The Product Catalogue application is a proof of concept (POC) for managing a pro
 
 ### Configuration
 
-The application can be configured using the `application.properties` file located in the `src/main/resources` directory. Here is an example configuration:
+The application can be configured using the `application.properties` file located in the `src/main/resources` directory. Here is an example configuration:'
 
+```ini
+spring.application.name=product-catalog
+```
 ### Test
 All the below Curl commands are added in the Postman collection in the below link. Please save the file and import in your Postman.
 https://github.com/avinashsingh1712/productCatalog/blob/ReadMe-update/src/test/Product-catalog.postman_collection.json
 
-```ini
-spring.application.name=product-catalog# productCatalog
-# productCatalog
 
