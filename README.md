@@ -50,7 +50,7 @@ The application can be configured using the `application.properties` file locate
 
 ### Test
 All the below Curl commands are added in the Postman collection in the below link. Please save the file and import in your Postman.
-https://github.com/ingka-group-digital/ilo-fli-common-services/blob/main/gcp/services/maintenance/v1/maintenance-v1/test/Maintenance%20Service.postman_collection.json
+https://github.com/avinashsingh1712/productCatalog/blob/ReadMe-update/src/test/Product-catalog.postman_collection.json
 
 ```ini
 spring.application.name=product-catalog# productCatalog
