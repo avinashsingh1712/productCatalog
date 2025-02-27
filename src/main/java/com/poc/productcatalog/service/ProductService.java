@@ -1,11 +1,36 @@
 package com.poc.productcatalog.service;
 
+import com.poc.productcatalog.data.ProductRepository;
 import com.poc.productcatalog.dto.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
-public class FuzzySearch {
+@Service
+public class ProductService {
+
+    @Autowired
+    private ProductRepository productRepository;
+
+
+    public Optional<Product> findById(String id) {
+        return productRepository.findById(id);
+    }
+
+    public Optional<Product> findByName(String name) {
+        return productRepository.findByName(name);
+    }
+
+    public void save(Product product) {
+        productRepository.save(product);
+    }
+
+    public List<Product> findAll() {
+        return productRepository.findAll();
+    }
 
     /**
      * Finds all products from the producs that are within the specified distance from the search query.
@@ -15,7 +40,7 @@ public class FuzzySearch {
      * @param maxDistance the maximum allowed distance
      * @return a list of products that are within the specified distance from the search term
      */
-    public static List<Product> searchProducts(List<Product> productList,String query, int maxDistance) {
+    public List<Product> searchProducts(List<Product> productList,String query, int maxDistance) {
         List<Product> results = new ArrayList<>();
         for (Product product : productList) {
             int distance = findMatching(query, product.getName());
@@ -34,7 +59,7 @@ public class FuzzySearch {
      * @param productName the second string
      * @return the Levenshtein distance between the two strings
      */
-    public static int findMatching(String query, String productName) {
+    private int findMatching(String query, String productName) {
         int qLength = query.length();
         int pLength = productName.length();
         int[][] pArray = new int[qLength + 1][pLength + 1];
